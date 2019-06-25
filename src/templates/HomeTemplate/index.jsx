@@ -62,13 +62,9 @@ const HomeTemplate = props => {
         </Button>
       </Flex>
       <Flex>
-        <Flex>
-          {[1, 2, 3, 4].map(item => (
-            <Box bg="main" pb={5} width={0.25} key={item}>
-              <Box bg="gray" pb={7} />
-            </Box>
-          ))}
-        </Flex>
+        {[1, 2, 3].map(item => (
+          <Box bg="Linen" width={1 / 3} pb={8} key={item} />
+        ))}
       </Flex>
       <Box bg="white" pb={5} style={{ borderBottom: '1px solid black' }}>
         <Flex>
