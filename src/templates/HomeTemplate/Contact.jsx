@@ -5,6 +5,7 @@ import CommonContainer from '../../components/CommonContainer';
 import LabelInput from '../../components/LabelInput';
 import { Flex, Box } from 'rebass';
 import Button from '../../components/Button';
+import Text from '../../components/Text';
 
 const formName = 'Contacto';
 
@@ -58,33 +59,34 @@ const Contact = () => {
               mx="auto"
               style={{ maxWidth: '40em' }}
             >
+              <Text as="h2" pb={4} fontSize={4} fontWeight="bold">
+                Contacto
+              </Text>
               <p hidden>
                 <label>
                   Don’t fill this out: <Field name="bot-field" />
                 </label>
               </p>
 
-              <Flex flexDirection={['column', 'column', 'row']}>
-                <Box pb={2} width={[1, 1, 1 / 2]} pr={[0, 0, 5]}>
-                  <LabelInput
-                    text="Name"
-                    name="name"
-                    autoComplete="name"
-                    disabled={disabled}
-                  />
-                </Box>
-                <Box pb={2} width={[1, 1, 1 / 2]} pl={[0, 0, 5]}>
-                  <LabelInput
-                    text="Email"
-                    name="email"
-                    autoComplete="email"
-                    type="email"
-                    disabled={disabled}
-                  />
-                </Box>
-              </Flex>
+              <Box pb={2} width={1}>
+                <LabelInput
+                  text="Nombre"
+                  name="name"
+                  autoComplete="name"
+                  disabled={disabled}
+                />
+              </Box>
+              <Box pb={2} width={1}>
+                <LabelInput
+                  text="Correo"
+                  name="email"
+                  autoComplete="email"
+                  type="email"
+                  disabled={disabled}
+                />
+              </Box>
               <LabelInput
-                text="Message"
+                text="Mensaje"
                 name="message"
                 disabled={disabled}
                 component="textarea"

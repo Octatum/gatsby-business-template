@@ -6,10 +6,12 @@ const theme = {
     lightBlack: '#111',
     green: '#32a100',
     white: '#ffffff',
+    gray: 'rgba(196, 196, 196, 0.4)',
+    main: '#5C338A',
   },
-  space: [0, 4, 8, 16, 32, 64, 128, 256],
+  space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
-    sans: 'Raleway, sans-serif',
+    sans: "'Quicksand', 'lato', sans-serif",
     serif: '"Playfair Display", monospace',
   },
   shadows: {

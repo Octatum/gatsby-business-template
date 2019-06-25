@@ -41,8 +41,8 @@ module.exports = {
             variants: ['400', '700', '700i', '900'],
           },
           {
-            family: 'Raleway',
-            variants: ['300', '300i', '500', '800'],
+            family: 'Quicksand',
+            variants: ['400'],
           },
         ],
       },

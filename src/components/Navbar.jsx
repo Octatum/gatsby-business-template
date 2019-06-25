@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Flex, Box } from 'rebass';
 import { Link } from 'gatsby';
-import OctatumLogo from '../assets/octatum-black.svg';
+import Logo from '../assets/logo.svg';
+import { RebassLink } from './Text';
 
 const Container = styled(Box)`
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1;
-  border-bottom: 1px solid #dfdfdf;
   transition: all 0.4s;
 `;
 
@@ -37,17 +37,33 @@ const Navbar = () => {
   });
 
   return (
-    <Container width={1} bg="white" className={top ? 'top' : ''}>
+    <Container width={1} bg="transparent">
       <StyledFlex
         mx="auto"
         px={[3, 3, 5]}
-        py={top ? 4 : 3}
+        py={[3, 3, 5]}
         justifyContent="space-between"
       >
         <Box>
           <Link style={{ display: 'block' }} to="/">
-            <Image alt="Simple logo" src={OctatumLogo} />
+            <Image alt="Simple logo" src={Logo} />
           </Link>
+        </Box>
+        <Box>
+          <Flex alignItems="center" style={{ height: '100%' }}>
+            <RebassLink color="white" pl={4} fontSize={3} to="/">
+              Inicio
+            </RebassLink>
+            <RebassLink color="white" pl={4} fontSize={3} to="/nosotros">
+              Nosotros
+            </RebassLink>
+            <RebassLink color="white" pl={4} fontSize={3} to="/coleccion">
+              Colección
+            </RebassLink>
+            <RebassLink color="white" pl={4} fontSize={3} to="/#contacto">
+              Contacto
+            </RebassLink>
+          </Flex>
         </Box>
       </StyledFlex>
     </Container>

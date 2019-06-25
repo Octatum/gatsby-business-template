@@ -1,15 +1,18 @@
-import { Text as RebassText } from 'rebass';
-import styled from 'styled-components';
+import React from 'react';
+import { Button as RebassButton } from 'rebass';
 
-const Button = styled(RebassText)`
-  border: none;
-`;
+function Button(props) {
+  return <RebassButton style={{ border: 'none' }} {...props} />;
+}
 
 Button.defaultProps = {
-  as: 'button',
   color: 'white',
   fontSize: 2,
-  bg: 'green',
+  bg: 'main',
+  fontWeight: 'normal',
+  borderRadius: 0,
+  px: 3,
+  py: 2,
 };
 
 export default Button;
